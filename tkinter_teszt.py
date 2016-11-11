@@ -5,6 +5,14 @@ main_window = tkinter.Tk()      # http://effbot.org/tkinterbook/wm.htm
 main_window.title('Ablak neve')
 main_window.geometry('300x500+500+100') #széles x magas + bal elűről jobbra + bal felűről lefelé
 
+left_frame = tkinter.Frame(main_window, bg='green')
+left_frame.pack(side='right')
+left_frame.place(rely=0.8)
+
+tkinter.Label(left_frame, text='Label').grid(row=0, column=0)
+tkinter.Label(left_frame, text=' xxxx').grid(row=0, column=1)
+tkinter.Label(left_frame, text='La').grid(row=1, column=0, sticky='w')
+tkinter.Label(left_frame, text=' xfgfgxx').grid(row=1, column=1)
 
 var = tkinter.StringVar()
 label = tkinter.Message(main_window, textvariable=var, relief='raised')
@@ -31,6 +39,6 @@ msg2.place(rely=0.4
           #x=10
           )
 
-# Code to add widgets will go here...
+
 
 main_window.mainloop()
